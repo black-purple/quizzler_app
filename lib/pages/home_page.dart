@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quizzler_app/quiz_brain.dart';
+import 'package:quizzler_app/services/quiz_brain.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
 QuizBrain quizBrain = QuizBrain();
