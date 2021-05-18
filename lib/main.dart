@@ -7,6 +7,9 @@ class Quizzler extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primaryColor: Colors.blueGrey[900],
+      ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.blueGrey[900],
