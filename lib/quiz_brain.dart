@@ -4,30 +4,33 @@ class QuizBrain {
   int _questionNum = 0;
 
   List<Question> _questionBank = [
-    Question('Some cats are actually allergic to humans', true),
-    Question('You can lead a cow down stairs but not up stairs.', false),
-    Question('Approximately one quarter of human bones are in the feet.', true),
-    Question('A slug\'s blood is green.', true),
-    Question('Buzz Aldrin\'s mother\'s maiden name was \"Moon\".', true),
-    Question('It is illegal to pee in the Ocean in Portugal.', true),
+    Question('La capital de la Roumanie est \"Bucarest\".', true),
     Question(
-        'No piece of square dry paper can be folded in half more than 7 times.',
+        'Vous pouvez emmener une vache dans les escaliers, mais pas l\'inverse.',
         false),
     Question(
-        'In London, UK, if you happen to die in the House of Parliament, you are technically entitled to a state funeral, because the building is considered too sacred a place.',
-        true),
+        'Environ un quart des os humains se trouvent dans les pieds.', true),
+    Question('Le sang d\'une limace est vert', true),
+    // Question('Buzz Aldrin\'s mother\'s maiden name was \"Moon\".', true),
+    Question('Il est illégal de faire pipi dans l\'océan au Portugal.', true),
     Question(
-        'The loudest sound produced by any animal is 188 decibels. That animal is the African Elephant.',
+        'Aucun morceau de papier carré sec ne peut être plié plus de 7 fois.',
         false),
     Question(
-        'The total surface area of two human lungs is approximately 70 square metres.',
-        true),
-    Question('Google was originally called \"Backrub\".', true),
-    Question(
-        'Chocolate affects a dog\'s heart and nervous system; a few ounces are enough to kill a small dog.',
+        'À Londres, au Royaume-Uni, si vous décédez au Parlement, vous avez techniquement droit à des funérailles d\'État, car le bâtiment est considéré comme un lieu trop sacré.',
         true),
     Question(
-        'In West Virginia, USA, if you accidentally hit an animal with your car, you are free to take it home to eat.',
+        'Le son le plus fort produit par un animal est de 188 décibels. Cet animal est l\'éléphant d\'Afrique.',
+        false),
+    Question(
+        'La superficie totale de deux poumons humains est d\'environ 70 mètres carrés.',
+        true),
+    Question('Google s\'appelait à l\'origine "Backrub".', true),
+    Question(
+        'Le chocolat affecte le cœur et le système nerveux d\'un chien; quelques onces suffisent pour tuer un petit chien.',
+        true),
+    Question(
+        'En Virginie de ouest aux États-Unis, si vous heurtez accidentellement un animal avec votre voiture, vous êtes libre de le ramener à la maison pour le manger.',
         true),
   ];
 
