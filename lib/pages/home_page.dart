@@ -31,6 +31,8 @@ class _HomePageState extends State<HomePage> {
           ).show();
           scoreKeeper = [];
           quizBrain.reset();
+          vrai = 0;
+          faux = 0;
         } else {
           if (correctAnswer == userPickedAnswer) {
             scoreKeeper.add(Icon(
