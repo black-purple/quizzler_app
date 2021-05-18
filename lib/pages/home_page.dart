@@ -3,11 +3,12 @@ import 'package:quizzler_app/quiz_brain.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
 QuizBrain quizBrain = QuizBrain();
+int questions = quizBrain.questionBankLengh();
 
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
-  final String name;
+  final String? name;
   HomePage({
     this.name,
   });
@@ -15,16 +16,17 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List<Icon> scoreKeeper = [];
+  int vrai = 0, faux = 0;
 
   void checkAnswer(bool userPickedAnswer) {
-    bool correctAnswer = quizBrain.getQuestionAnswer();
+    bool? correctAnswer = quizBrain.getQuestionAnswer();
 
     setState(
       () {
         if (quizBrain.isFinished() == true) {
           Alert(
-            title: "OUAIS!!",
-            desc: "Vous avez fini le quiz!",
+            title: "Quiz Fini!!",
+            desc: "vous avez $vrai/$questions vrai et $faux/$questions faux",
             context: context,
           ).show();
           scoreKeeper = [];
@@ -35,11 +37,13 @@ class _HomePageState extends State<HomePage> {
               Icons.check,
               color: Colors.green,
             ));
+            vrai++;
           } else {
             scoreKeeper.add(Icon(
               Icons.close,
               color: Colors.red,
             ));
+            faux++;
           }
           quizBrain.nextQuestion();
         }
@@ -49,10 +53,11 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    String? name = widget.name;
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Quiz'),
+          title: Text('Joueur:   $name '),
         ),
         backgroundColor: Colors.blueGrey[900],
         body: Column(
@@ -65,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                 padding: EdgeInsets.all(10.0),
                 child: Center(
                   child: Text(
-                    quizBrain.getQuestionText(),
+                    quizBrain.getQuestionText()!,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 25.0,

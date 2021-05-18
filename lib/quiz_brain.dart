@@ -52,7 +52,8 @@ class QuizBrain {
     _questionNum = 0;
   }
 
-  String getQuestionText() => _questionBank[_questionNum].questionText;
+  String? getQuestionText() => _questionBank[_questionNum].questionText;
 
-  bool getQuestionAnswer() => _questionBank[_questionNum].questionAnswer;
+  bool? getQuestionAnswer() => _questionBank[_questionNum].questionAnswer;
+  int questionBankLengh() => _questionBank.length;
 }

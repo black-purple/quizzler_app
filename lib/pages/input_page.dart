@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../konstants.dart';
 import 'home_page.dart';
 
@@ -102,7 +101,7 @@ class _InputPageState extends State<InputPage> {
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
                       borderSide: BorderSide(
-                        color: Colors.blueGrey[900],
+                        color: Colors.blueGrey[900]!,
                       ),
                     ),
                     focusedBorder: OutlineInputBorder(
